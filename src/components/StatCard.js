@@ -5,10 +5,13 @@ import Typography from '@mui/material/Typography';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
-function StatCard({ title, value, change }) {
+function StatCard({ title, value, change, icon }) {
   return (
     <Card>
       <CardContent>
+      <Typography color="textSecondary" gutterBottom>
+          {icon}
+        </Typography>
         <Typography color="textSecondary" gutterBottom>
           {title}
         </Typography>

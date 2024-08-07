@@ -12,6 +12,10 @@ import GoalsIcon from '@mui/icons-material/Flag';
 import DishesIcon from '@mui/icons-material/Restaurant';
 import MenuIcon from '@mui/icons-material/MenuBook';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 
 
 function Dashboard() {
@@ -38,39 +42,48 @@ function Dashboard() {
 
   return (
     <Grid container spacing={3}>
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid item xs={12} sm={6} md={2}>
         <StatCard
           title="Total Orders"
           value="75"
           change={3}
-          icon={<GoalsIcon sx={iconStyle('#1e88e5', '#ffffff')} />}
+          icon={<ShoppingBasketIcon sx={iconStyle('#293368', '#3C63FC')} />}
           color="#e8f5e9"
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid item xs={12} sm={6} md={2}>
         <StatCard
           title="Total Delivered"
           value="70"
           change={-3}
-          icon={<DishesIcon sx={iconStyle('#00c853', '#ffffff')} />}
+          icon={<LocalMallIcon sx={iconStyle('#175045', '#00C88C')} />}
           color="#e3f2fd"
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid item xs={12} sm={6} md={2}>
         <StatCard
           title="Total Cancelled"
           value="05"
           change={3}
-          icon={<MenuIcon sx={iconStyle('#d50000', '#ffffff')} />}
+          icon={<RemoveShoppingCartIcon sx={iconStyle('#5F3237', '#F25E5E')} />}
           color="#ffebee"
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid item xs={12} sm={6} md={2}>
         <StatCard
           title="Total Revenue"
           value="$12k"
           change={-3}
-          icon={<AttachMoneyIcon sx={iconStyle('#ffd600', '#ffffff')} />}
+          icon={<TrendingUpIcon sx={iconStyle('#5B2A4A', '#E8409F')} />}
+          color="#fffde7"
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <StatCard
+          title="Net Profit"
+          value="$6754.34"
+          change={4}
+          icon={<AttachMoneyIcon sx={iconStyle('#195247', '#099870')} />}
           color="#fffde7"
         />
       </Grid>
@@ -87,7 +100,7 @@ function Dashboard() {
               onClick={() => handleButtonClick('Goals')}
             >
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <GoalsIcon sx={iconStyle('#1e88e5', '#ffffff')} />
+                <GoalsIcon sx={iconStyle('#5F3237', '#EF6822')} />
                 <Box sx={{ ml: 1, color: 'white' }}>Goals</Box>
               </Box>
               <ArrowForwardIcon sx={{ color: 'white' }} />
@@ -97,7 +110,7 @@ function Dashboard() {
               onClick={() => handleButtonClick('Popular Dishes')}
             >
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <DishesIcon sx={iconStyle('#00c853', '#ffffff')} />
+                <DishesIcon sx={iconStyle('#202028', '#6179DA')} />
                 <Box sx={{ ml: 1, color: 'white' }}>Popular Dishes</Box>
               </Box>
               <ArrowForwardIcon sx={{ color: 'white' }} />
@@ -107,7 +120,7 @@ function Dashboard() {
               onClick={() => handleButtonClick('Menus')}
             >
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <MenuIcon sx={iconStyle('#d50000', '#ffffff')} />
+                <MenuIcon sx={iconStyle('#214A60', '#21AAE9')} />
                 <Box sx={{ ml: 1, color: 'white' }}>Menus</Box>
               </Box>
               <ArrowForwardIcon sx={{ color: 'white' }} />

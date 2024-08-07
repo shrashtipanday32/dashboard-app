@@ -43,7 +43,22 @@ const styles = {
     width: '100%', // Make logout item take full width
   },
 };
-
+const iconStyle = (bgColor, iconColor) => ({
+  borderRadius: '50%',
+  backgroundColor: bgColor,
+  color: iconColor,
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '50px',
+  height: '50px',
+  // Remove hover effect by default
+  '&:hover': {
+    backgroundColor: bgColor,
+    color: iconColor,
+  },
+});
 function Sidebar() {
   return (
     <Drawer
@@ -52,11 +67,11 @@ function Sidebar() {
       anchor="left"
     >
       <List>
-        {['AppIcon', 'Dashboard', 'Analytics', 'Orders', 'Menu'].map((text, index) => (
+        {['We Developer', 'Dashboard', 'Analytics', 'Orders', 'Menu'].map((text, index) => (
           <Tooltip title={text} placement="right" arrow key={text}>
             <ListItem button style={styles.menuItem}>
               <ListItemIcon style={styles.iconContainer}>
-              {index === 0 ? <DashboardIcon /> : null}
+              {index === 0 ? <DashboardIcon sx={iconStyle('#121212', '#7399F0')} /> : null}
                 {index === 1 ? <HomeIcon /> : null}
                 {index === 2 ? <BarChartIcon /> : null}
                 {index === 3 ? <ReceiptIcon /> : null}
