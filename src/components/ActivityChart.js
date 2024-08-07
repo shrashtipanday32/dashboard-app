@@ -3,19 +3,37 @@ import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, R
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-const data = [
-  { name: '8', value: 4000 },
-  { name: '9', value: 3000 },
-  { name: '10', value: 2000 },
-  { name: '11', value: 2780 },
-  { name: '12', value: 1890 },
-  { name: '13', value: 2390 },
-  { name: '14', value: 3490 },
-  { name: '11', value: 2780 },
-  { name: '12', value: 1890 },
-  { name: '13', value: 2390 },
-  { name: '14', value: 3490 },
-];
+// const data = [
+//   { name: '8', value: 4000 },
+//   { name: '9', value: 3000 },
+//   { name: '10', value: 2000 },
+//   { name: '11', value: 2780 },
+//   { name: '12', value: 1890 },
+//   { name: '13', value: 2390 },
+//   { name: '14', value: 3490 },
+//   { name: '11', value: 2780 },
+//   { name: '12', value: 1890 },
+//   { name: '13', value: 2390 },
+//   { name: '14', value: 3490 },
+//   { name: '10', value: 2000 },
+//   { name: '11', value: 2780 },
+//   { name: '12', value: 1890 },
+//   { name: '13', value: 2390 },
+//   { name: '14', value: 3490 },
+// ];
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const data = [];
+
+for (let i = 0; i < 50; i++) {
+  data.push({
+    name: getRandomInt(5, 20).toString(),
+    value: getRandomInt(0, 4000),
+  });
+}
 
 const styles = {
   container: {
@@ -103,7 +121,7 @@ function ActivityChart() {
           <MenuItem value="line" sx={styles.menuItem}>Monthly</MenuItem>
         </Select>
       </FormControl>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={200}>
         {chartType === 'bar' ? (
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" stroke="#444" /> {/* Darker grid color */}

@@ -12,7 +12,6 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 
-const profileImageUrl = 'https://via.placeholder.com/40'; // Replace with your profile image URL
 
 function Header() {
   return (
@@ -62,10 +61,17 @@ function Header() {
               <AccountCircleIcon />
             </IconButton>
             <Avatar
-              alt="Profile Image"
-              src={profileImageUrl}
-              sx={{ width: 40, height: 40 }}
-            />
+              sx={{
+                width: 40,
+                height: 40,
+                bgcolor: '#1e88e5', // Background color for the circle
+                color: 'white', // Text color
+                fontWeight: 'bold', // Text weight
+                fontSize: '16px', // Font size
+              }}
+            >
+              SP
+            </Avatar>
           </Box>
         </Box>
       </Toolbar>

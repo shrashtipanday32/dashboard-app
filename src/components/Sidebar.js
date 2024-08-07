@@ -9,6 +9,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import LogoutIcon from '@mui/icons-material/Logout';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const drawerWidth = 60;
 
@@ -51,14 +52,15 @@ function Sidebar() {
       anchor="left"
     >
       <List>
-        {['Dashboard', 'Analytics', 'Orders', 'Menu'].map((text, index) => (
+        {['AppIcon', 'Dashboard', 'Analytics', 'Orders', 'Menu'].map((text, index) => (
           <Tooltip title={text} placement="right" arrow key={text}>
             <ListItem button style={styles.menuItem}>
               <ListItemIcon style={styles.iconContainer}>
-                {index === 0 ? <HomeIcon /> : null}
-                {index === 1 ? <BarChartIcon /> : null}
-                {index === 2 ? <ReceiptIcon /> : null}
-                {index === 3 ? <MenuBookIcon /> : null}
+              {index === 0 ? <DashboardIcon /> : null}
+                {index === 1 ? <HomeIcon /> : null}
+                {index === 2 ? <BarChartIcon /> : null}
+                {index === 3 ? <ReceiptIcon /> : null}
+                {index === 4 ? <MenuBookIcon /> : null}
               </ListItemIcon>
             </ListItem>
           </Tooltip>
